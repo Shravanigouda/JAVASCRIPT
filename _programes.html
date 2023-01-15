@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tasks using map</title>
+   
+
+</head>
+<body>
+    <script>
+const employees = [
+    { name: "Adam", salary: 5000, bonus: 500, tax: 1000 },
+    { name: "Noah", salary: 8000, bonus: 1500, tax: 2500 },
+    { name: "Fabiano", salary: 1500, bonus: 500, tax: 200 },
+    { name: "Alireza", salary: 4500, bonus: 1000, tax: 900 },
+];
+
+// calculate the net amount to be given to the employees
+const amount = employees.map((ele) => {
+    return ele.salary + ele.bonus - ele.tax
+})
+console.log(amount) //map
+
+
+
+//function to return the square of a number
+let numbers=[4,7,20,10,3]
+let sqr = numbers.map((ele)=>{
+        return ele * ele;
+
+})
+  console.log(sqr)
+
+
+
+
+
+// custom arrow function
+const string = "JavaScript";
+const stringArr = string.split(''); // array with individual string character
+
+let asciiArr = stringArr.map((ele,ind,arr) =>{ return ele.charCodeAt()});
+
+// map() does not change the original array
+console.log(stringArr); // ['J', 'a', 'v', 'a','S', 'c', 'r', 'i', 'p', 't']
+
+console.log(asciiArr); // [ 74,  97, 118,  97, 83,  99, 114, 105, 112, 116 ]
+
+
+
+    </script>
+</body>
+</html>

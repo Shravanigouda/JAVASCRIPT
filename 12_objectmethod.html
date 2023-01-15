@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object methods in js</title>
+  </head>
+  <body>
+    
+    <button onclick="">try it</button>
+    <script>
+      // create an object , object as properties ("key : value" pairs), using obj literal
+
+      const he = {
+        firstName: "Hardik",
+        lastName: "pandya",
+        profession: "cricketer",
+      };
+     
+     
+      console.log(he);
+
+      //(R) access object values using - (.)dot notation & [""] sqare bracket notation
+
+      console.log(he.profession);
+      console.log(he["firstName"]);
+
+      //(U) updating the value and adding a value of object
+      const fruits = {
+        fruit1: "Abc",
+        fruit2: "Banana",
+        fruit3: "Grapes",
+      };
+      fruits["fruit2"] = "mango"; //(Update the value)
+      fruits.fruits4 = "Kiwi"; //(Add new property)
+
+      document.getElementById("update").innerHTML =
+        "(U) " + fruits.fruit1 + ", " + fruits.fruit2 + ", " + fruits.fruit3;
+      console.log(fruits);
+
+      //(D) delete a property from an object
+
+      const movie = {
+        name: "Dhruv_vikram",
+        profession: "Actor,singer & lyricist",
+        industry: "Tamil",
+      };
+
+      delete movie.industry; //using delete keyword
+      document.getElementById("delete").innerHTML =
+        "(D) My favourite " +
+        movie.name +
+        "  is an  " +
+        movie.profession +
+        " in " +
+        movie.industry;
+      console.log(movie);
+
+      //using (this) keyword refers to an object 
+      //ex=1
+      const she = {
+        firstName: "Shravani",
+        lastName: "goud",
+
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      document.getElementById("this").innerHTML = "(this) " + she.fullName();
+      console.log(she);
+      
+       //Ex=2
+      function user(n,a,p) {
+          this.name = n;
+          this.age = a;
+          this.place = p;
+          console.log(n,a,p)
+      }
+      let user1 = new user("Sandeep",30,"hyderabad"); 
+      console.log(user1);
+      let user2 = new user("Saideep",26,"kamareddy");
+      console.log(user2);
+
+      const students = {name:"shravani",
+                       rollNO:11111944101,
+                       totalMarks:60};
+
+    function studinf(){
+        console.log(students.name);
+    console.log(students.rollNO);
+    console.log(students.totalMarks);
+    }
+    function checkresults(){
+if(students.totalMarks >= 40){
+  console.log("you passed")
+} else{
+  console.log("you failed")
+}
+    }
+    document.getElementById("hi").innerHTML = "";
+studinf();
+checkresults();
+
+    </script>
+  </body>
+</html>

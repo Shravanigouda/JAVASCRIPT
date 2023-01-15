@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array methods in js</title>
+  </head>
+  <body>
+    <p id="create"></p>
+    <p id="read"></p>
+    <p id="update"></p>
+    <p id="del"></p>
+    <p id="delete"></p>
+    <p id="pop"></p>
+    <p id="push"></p>
+    <p id="shift"></p>
+    <p id="unshift"></p>
+    <p id="forloop"></p>
+
+    <script>
+      //(create) Array creation
+      const a = [10, 20, 30, 40];
+
+      document.getElementById("create").innerHTML = "(C) : " + a;
+      console.log(a, typeof "a", a.length);
+
+      //(read) The index element [2] is
+      let b = a[2];
+      document.getElementById("read").innerHTML = "(R)  :  " + b;
+      console.log(b, typeof "b");
+
+      //(update) update a new array value
+      let c = [50, 60, 70, 80];
+      c[0] = "20";
+
+      document.getElementById("update").innerHTML = "(U) : " + c;
+      console.log(c, typeof "c");
+
+      //(delete)remove an array element
+      let d = [90, 100, 110, 120];
+      document.getElementById("del").innerHTML = " Array : " + d;
+      d.splice(1);
+
+      document.getElementById("delete").innerHTML = "(D) :  " + d;
+      console.log(d, typeof "d");
+
+      //(pop) remove the last element of an aaray
+      //Accessing the last array element
+
+      let x = [1, 2, 3, 4];
+      x.pop();
+      document.getElementById("pop").innerHTML =
+        "(pop) :  " +
+        x +
+        "<br>" +
+        "<br>" +
+        " Accessing last element :    " +
+        a[a.length - 1];
+      console.log(x, typeof "x");
+
+      //(push) adds new item to the end of an array
+      let y = [5, 6, 7, 8];
+      y.push(9);
+      document.getElementById("push").innerHTML = "(push) :  " + y;
+      console.log(y, typeof "y");
+
+      //(shift) remove the first element of an aaray
+      let z = ["apple", "ball", "cat", "dog"];
+      z.shift();
+
+      document.getElementById("shift").innerHTML = "(shift) :  " + z;
+      console.log(z, typeof "z");
+
+      //(unshift) adds new element to the beginning
+      const s = ["apple", "ball", "cat", "dog"];
+      let length = s.length;
+      s.unshift("eggs", "fish");
+
+      document.getElementById("unshift").innerHTML = "(unshift) :  " + s;
+      console.log(s, typeof "s");
+
+      //looping array element
+      const t = ["hardik", "kohli", "dhoni", "rohit"];
+      let o = t.length;
+
+      let p = "<ul>";
+      for (let i = 0; i < o; i++) {
+        p += "<li>" + t[i] + "</li>";
+      }
+      p += "</ul>";
+
+      document.getElementById("forloop").innerHTML = "(using forloop) :  " + p;
+      console.log(t, typeof "t");
+    </script>
+  </body>
+</html>

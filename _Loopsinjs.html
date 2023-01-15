@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Loops in js</title>
+  </head>
+  <body>
+    <script>
+      //Array of numbers
+      //for-loop
+      const num = [10,20,30,40];
+
+for (let i = 0; i < num.length; i++) {
+    console.log(num[i]);
+   
+};
+     //forof-loop
+for(let ele of num ){
+  console.log("forof- " + ele );
+  
+};
+
+   //Array of strings
+   //for-loop
+   let arrstr = ["jan","feb","march","april"];
+
+   for(let v = 0; v <arrstr.length; v++){
+
+      console.log(arrstr[v]);
+   };
+   
+    //for-of loop
+    for(let e of arrstr){
+     
+      console.log("forof- " + e );
+    };
+    
+    // Array of arrays
+    //for loop
+    const arr=[['krish', 24], ['jansy', 23], ['hemanth', 24]];
+
+    for(let val = 0; val < arr.length; val++){
+      
+      console.log(arr[val][0])
+
+    };
+
+    //forof loop
+    for(let val of arr){
+     
+      console.log("forof- " + val[1] )
+    }
+
+    // Array of objects
+   
+    const employees = [
+    { name: "Adam", salary: 5000, bonus: 500},
+    { name: "Noah", salary: 8000, bonus: 1500 },
+    { name: "Fabiano", salary: 1500, bonus: 500},
+    { name: "Alireza", salary: 4500, bonus: 1000 },
+
+   ];
+     //for loop
+    for(let i = 0; i < employees.length; i++){
+
+      console.log(employees[i].salary + employees[i].bonus)
+    }
+   
+    //forof loop
+    for(let ele of employees){
+    console.log(ele.salary * 2)
+   
+    };
+      
+    </script>
+  </body>
+</html>

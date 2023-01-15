@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>array methods</title>
+  </head>
+  <body>
+    <script>
+     
+
+const greet = ['hello','hi','welcome'];
+
+const add = greet.map(ele => ele + " world");
+
+console.log(add); //map
+
+const newarr = add.filter(ele => ele.length > 8)
+
+console.log(newarr); //filter
+
+const num =[53,22,0,10,15];
+const newnum =num.reduce((acc,ele) =>{ return acc - ele });
+
+console.log(newnum); //reduce
+
+
+const stng = "I Love Java.";
+let lowcase = stng.toLowerCase()
+console.log(lowcase); //lowercase
+
+let incld = lowcase.includes("java");
+console.log(incld); //includes
+
+let replc = lowcase.replace("java","javascript");
+console.log(replc); //replace
+
+
+
+
+  
+    </script>
+  </body>
+</html>
